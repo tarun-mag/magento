@@ -117,3 +117,36 @@ Due to security, when installed this way the Magento standard for phpcs cannot b
     ]
 }
 ```
+## Installation for development
+
+You can install Magento Coding Standard by cloning this GitHub repo:
+
+```bash 
+git clone git@github.com:magento/magento-coding-standard.git
+cd magento-coding-standard
+composer install
+```
+
+It is possible also to install a standalone application via [Composer](https://getcomposer.org/)
+
+```bash
+composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
+```
+## Verify installation
+Command should return the list of installed coding standards including Magento2.
+```bash
+vendor/bin/phpcs -i
+```
+## Usage
+
+Once installed, you can run phpcs from the command-line to analyze your code MyAwesomeExtension
+
+```bash
+vendor/bin/phpcs --standard=Magento2 app/code/MyAwesomeExtension
+```
+## Fixing issues automatically
+Also, you can run phpcbf from the command-line to fix your code MyAwesomeExtension for warnings like "PHPCBF CAN FIX THE [0-9]+ MARKED SNIFF VIOLATIONS AUTOMATICALLY"
+
+```bash
+vendor/bin/phpcbf --standard=Magento2 app/code/MyAwesomeExtension
+```
