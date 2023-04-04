@@ -89,6 +89,41 @@ php.ini
 
 See the [Magento Commerce Cloud Guide](https://devdocs.magento.com/cloud/bk-cloud.html).
 
+## Basic Coding Standard
+Code MUST follow all rules outlined in [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md).
+
+## Files
+All PHP files MUST use the Unix LF (linefeed) line ending.
+
+All PHP files MUST end with a single blank line.
+
+The closing ?> tag MUST be omitted from files containing only PHP.
+
+## Lines
+There MUST NOT be a hard limit on line length.
+
+The soft limit on line length MUST be 120 characters; automated style checkers MUST warn but MUST NOT error at the soft limit.
+
+Lines SHOULD NOT be longer than 80 characters; lines longer than that SHOULD be split into multiple subsequent lines of no more than 80 characters each.
+
+There MUST NOT be trailing whitespace at the end of non-blank lines.
+
+Blank lines MAY be added to improve readability and to indicate related blocks of code.
+
+There MUST NOT be more than one statement per line.
+
+## Indenting
+Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting.
+```
+Using only spaces, and not mixing spaces with tabs, helps to avoid problems with diffs, patches, history, and annotations. The use of spaces also makes it easy to insert fine-grained sub-indentation for inter-line alignment.
+```
+
+## Keywords and True/False/Null
+
+PHP [keywords](http://php.net/manual/en/reserved.keywords.php) MUST be in lower case.
+
+The PHP constants ```true```, ```false```, and ```null``` MUST be in lower case.
+
 ## Magento Coding Standard
 
 A set of Magento rules for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) tool.
@@ -144,6 +179,26 @@ Also, you can run phpcbf from the command-line to fix your code MyAwesomeExtensi
 
 ```bash
 vendor/bin/phpcbf --standard=Magento2 app/code/MyAwesomeExtension
+```
+
+## Namespace and Use Declarations
+
+When present, there MUST be one blank line after the ```namespace``` declaration.
+When present, all ```use``` declarations MUST go after the ```namespace``` declaration.
+There MUST be one ```use``` keyword per declaration.
+There MUST be one blank line after the ```use``` block.
+
+For example:
+
+```bash
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+// ... additional PHP code ...
 ```
 
 ## License
