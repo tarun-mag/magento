@@ -284,7 +284,65 @@ class ClassName
 }
 ```
 
+## Method Arguments
+In the ```argument``` list, there MUST NOT be a ```space``` before each comma, and there MUST be one space after each comma.
 
+Method arguments with default values MUST go at the end of the argument list.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public function foo($arg1, &$arg2, $arg3 = [])
+    {
+        // method body
+    }
+}
+```
+
+Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line.
+
+When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public function aVeryLongMethodName(
+        ClassTypeHint $arg1,
+        &$arg2,
+        array $arg3 = []
+    ) {
+        // method body
+    }
+}
+```
+
+## ```abstract```, ```final```, and ```static```
+When present, the ```abstract``` and ```final``` declarations MUST precede the visibility declaration.
+
+When present, the ```static``` declaration MUST come after the visibility declaration.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+abstract class ClassName
+{
+    protected static $foo;
+
+    abstract protected function zim();
+
+    final public static function bar()
+    {
+        // method body
+    }
+}
+```
 
 ## License
 Each Magento source file included in this distribution is licensed under the OSL-3.0 license.
