@@ -89,11 +89,6 @@ php.ini
 
 See the [Magento Commerce Cloud Guide](https://devdocs.magento.com/cloud/bk-cloud.html).
 
-## License
-Each Magento source file included in this distribution is licensed under the OSL-3.0 license.
-
-Please see [LICENSE.txt](https://github.com/magento/magento-cloud/blob/master/LICENSE.txt) for the full text of the [Open Software License v. 3.0 (OSL-3.0)](http://opensource.org/licenses/osl-3.0.php).
-
 ## Magento Coding Standard
 
 A set of Magento rules for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) tool.
@@ -150,3 +145,8 @@ Also, you can run phpcbf from the command-line to fix your code MyAwesomeExtensi
 ```bash
 vendor/bin/phpcbf --standard=Magento2 app/code/MyAwesomeExtension
 ```
+
+## License
+Each Magento source file included in this distribution is licensed under the OSL-3.0 license.
+
+Please see [LICENSE.txt](https://github.com/magento/magento-cloud/blob/master/LICENSE.txt) for the full text of the [Open Software License v. 3.0 (OSL-3.0)](http://opensource.org/licenses/osl-3.0.php).
