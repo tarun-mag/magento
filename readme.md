@@ -102,6 +102,8 @@ A set of Magento rules for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 
 To use within your Magento 2 project you can use:
 
-``` composer require --dev magento/magento-coding-standard ```
+```
+composer require --dev magento/magento-coding-standard 
+```
 
 
