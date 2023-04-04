@@ -201,6 +201,91 @@ use OtherVendor\OtherPackage\BazClass;
 // ... additional PHP code ...
 ```
 
+## Classes, Properties, and Methods
+The term "class" refers to all classes, interfaces, and traits.
+
+## Extends and Implements
+
+The ```extends``` and ```implements``` keywords MUST be declared on the same line as the class name.
+
+The opening brace for the class MUST go on its own line; the closing brace for the class MUST go on the next line after the body.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName extends ParentClass implements \ArrayAccess, \Countable
+{
+    // constants, properties, methods
+}
+```
+
+Lists of ```implements``` MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one interface per line.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName extends ParentClass implements
+    \ArrayAccess,
+    \Countable,
+    \Serializable
+{
+    // constants, properties, methods
+}
+```
+## Properties
+Visibility MUST be declared on all properties.
+
+The ```var``` keyword MUST NOT be used to declare a property.
+
+There MUST NOT be more than one property declared per statement.
+
+Property names SHOULD NOT be prefixed with a single underscore to indicate protected or private visibility.
+
+A property declaration looks like the following.
+
+```bash
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public $foo = null;
+}
+```
+## Methods
+Visibility MUST be ```declared``` on all methods.
+
+Method ```names``` SHOULD NOT be prefixed with a single underscore to indicate protected or private visibility.
+
+Method ```names``` MUST NOT be declared with a space after the method name. The opening brace MUST go on its own line, and the closing brace MUST go on the next line following the body. There MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis.
+
+A method declaration looks like the following. Note the placement of parentheses, commas, spaces, and braces:
+
+```bash
+<?php
+namespace Vendor\Package;
+
+class ClassName
+{
+    public function fooBarBaz($arg1, &$arg2, $arg3 = [])
+    {
+        // method body
+    }
+}
+```
+
+
+
 ## License
 Each Magento source file included in this distribution is licensed under the OSL-3.0 license.
 
