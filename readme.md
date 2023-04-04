@@ -105,5 +105,15 @@ To use within your Magento 2 project you can use:
 ```bash
 composer require --dev magento/magento-coding-standard
 ```
+Due to security, when installed this way the Magento standard for phpcs cannot be added automatically. You can achieve this by adding the following to your project's ```composer.json:```
 
-
+```bash
+"scripts": {
+    "post-install-cmd": [
+      "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
+    ],
+    "post-update-cmd": [
+      "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
+    ]
+}
+```
